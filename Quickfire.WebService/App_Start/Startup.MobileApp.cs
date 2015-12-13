@@ -29,7 +29,7 @@ namespace quickfireService
             Database.SetInitializer(new quickfireInitializer());
 
             // To prevent Entity Framework from modifying your database schema, use a null database initializer
-            // Database.SetInitializer<quickfireContext>(null);
+            // Database.SetInitializer<QuickfireDatabaseContext>(null);
 
             MobileAppSettingsDictionary settings = config.GetMobileAppSettingsProvider().GetMobileAppSettings();
 
@@ -49,9 +49,9 @@ namespace quickfireService
         }
     }
 
-    public class quickfireInitializer : CreateDatabaseIfNotExists<quickfireContext>
+    public class quickfireInitializer : CreateDatabaseIfNotExists<QuickfireDatabaseContext>
     {
-        protected override void Seed(quickfireContext context)
+        protected override void Seed(QuickfireDatabaseContext context)
         {
             List<TodoItem> todoItems = new List<TodoItem>
             {

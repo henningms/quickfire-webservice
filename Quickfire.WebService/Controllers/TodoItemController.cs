@@ -14,7 +14,7 @@ namespace quickfireService.Controllers
         protected override void Initialize(HttpControllerContext controllerContext)
         {
             base.Initialize(controllerContext);
-            quickfireContext context = new quickfireContext();
+            QuickfireDatabaseContext context = new QuickfireDatabaseContext();
             DomainManager = new EntityDomainManager<TodoItem>(context, Request);
         }
 

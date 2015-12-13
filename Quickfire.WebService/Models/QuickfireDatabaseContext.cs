@@ -7,7 +7,7 @@ using quickfireService.DataObjects;
 
 namespace quickfireService.Models
 {
-    public class quickfireContext : DbContext
+    public class QuickfireDatabaseContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -18,7 +18,7 @@ namespace quickfireService.Models
 
         private const string connectionStringName = "Name=MS_TableConnectionString";
 
-        public quickfireContext() : base(connectionStringName)
+        public QuickfireDatabaseContext() : base(connectionStringName)
         {
         } 
 
